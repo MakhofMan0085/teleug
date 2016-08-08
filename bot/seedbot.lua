@@ -228,16 +228,16 @@ function create_config( )
     "invite",
     "all",
     "leave_ban",
-    "lock_join"
-    "lock_username"
-    "lock_tag"
-    "lock_media"
-    "lock_fwd"
-    "lock_reply"
-    "lock_operator"
-    "lock_emoji"
-    "lock_english"
-    "lock_fosh"
+    "lock_join",
+    "lock_username",
+    "lock_tag",
+    "lock_media",
+    "lock_fwd",
+    "lock_reply",
+    "lock_operator",
+    "lock_emoji",
+    "lock_english",
+    "lock_fosh",
 	"supergroup",
 	"whitelist",
 	"msg_checks"
