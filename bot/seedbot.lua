@@ -228,11 +228,21 @@ function create_config( )
     "invite",
     "all",
     "leave_ban",
+    "lock_join"
+    "lock_username"
+    "lock_tag"
+    "lock_media"
+    "lock_fwd"
+    "lock_reply"
+    "lock_operator"
+    "lock_emoji"
+    "lock_english"
+    "lock_fosh"
 	"supergroup",
 	"whitelist",
 	"msg_checks"
     },
-    sudo_users = {110626080},--Sudo users
+    sudo_users = {40914585},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[\n]],
     help_text_realm = [[
@@ -448,146 +458,115 @@ will return group ban list
 
 ]],
 	help_text_super =[[
-SuperGroup Commands:
+دستورات سوپرگروه:
 
-!info
-Displays general info about the SuperGroup
+✅دستورات قفل و بازکردن
+〰〰〰〰〰〰〰〰
+💭!lock|unlock link
+➖➖➖➖➖➖➖➖
+💭!lock|unlock member
+➖➖➖➖➖➖➖➖
+💭!lock|unlock flood
+➖➖➖➖➖➖➖➖
+💭!lock|unlock spam
+➖➖➖➖➖➖➖➖
+💭!lock|unlock farsi
+➖➖➖➖➖➖➖➖
+💭!lock|unlock RTL
+➖➖➖➖➖➖➖➖
+💭!lock|unlock Tgservice 
+➖➖➖➖➖➖➖➖
+💭!lock|unlock sticker
+➖➖➖➖➖➖➖➖
+💭!lock|unlock tag
+➖➖➖➖➖➖➖➖
+💭!lock|unlock emoji
+➖➖➖➖➖➖➖➖
+💭!lock|unlock english
+➖➖➖➖➖➖➖➖
+💭!lock|unlock fwd
+➖➖➖➖➖➖➖➖
+💭!lock|unlock reply
+➖➖➖➖➖➖➖➖
+💭!lock|unlock  join
+➖➖➖➖➖➖➖➖
+💭!lock|unlock username
+➖➖➖➖➖➖➖➖
+💭!lock|unlock media
+➖➖➖➖➖➖➖➖
+💭!lock|unlock fosh
+➖➖➖➖➖➖➖➖
+💭!lock|unlock leave
+➖➖➖➖➖➖➖➖
+💭!lock|unlock bots
+➖➖➖➖➖➖➖➖
+💭!lock|unlock operator
+〰〰〰〰〰〰〰〰
+➕
+✅دستورات کنترل اعضا
+〰〰〰〰〰〰〰〰〰〰〰〰
+💭!kick : by <reply|id|username>
+➖➖➖➖➖➖➖➖➖➖➖➖
+💭!ban : by <reply|id|username>
+➖➖➖➖➖➖➖➖➖➖➖➖
+💭!unban : by <reply|id|username>
+➖➖➖➖➖➖➖➖➖➖➖➖
+💭!silente|unsilent : by <reply|id|username>
+➖➖➖➖➖➖➖➖➖➖➖➖
+💭!kickme
+〰〰〰〰〰〰〰〰〰〰〰〰
+➕
+✅کنترل سوپرگروه ✌️
+〰〰〰〰〰〰〰〰〰
+💭!rules
+➖➖➖➖➖➖➖➖➖
+💭!setrules <write rules>
+➖➖➖➖➖➖➖➖➖
+💭!about
+➖➖➖➖➖➖➖➖➖
+💭!setabout <write about>
+➖➖➖➖➖➖➖➖➖
+💭!setphoto : then send photo
+➖➖➖➖➖➖➖➖➖
+💭!setname <write name>
+➖➖➖➖➖➖➖➖➖
+💭!id
+➖➖➖➖➖➖➖➖➖
+💭!settings 
+➖➖➖➖➖➖➖➖➖
+💭!setlink : send link in your pv
+➖➖➖➖➖➖➖➖➖
+💭!link <idchat> : send link
+➖➖➖➖➖➖➖➖➖
+💭!modlist
+➖➖➖➖➖➖➖➖➖
+💭!mute/unmute  [gifs,text,video,photo,all]
+➖➖➖➖➖➖➖➖➖
+💭!help
+〰〰〰〰〰〰〰〰〰
+➕
+✅ انتخاب ناظم برای سوپرگروه✌️
+〰〰〰〰〰〰〰〰〰〰〰〰
+💭!promote : by <<ریپلی|ایدی|یوزر نیم> 
+➖➖➖➖➖➖➖➖➖➖➖➖
+💭!demote : by <ریپلی|ایدی|یوزر نیم> 
+〰〰〰〰〰〰〰〰〰〰〰〰
+time sticker
+!time
+azan shahr ha
+!azan [shahr name]
 
-!admins
-Returns SuperGroup admins list
-
-!owner
-Returns group owner
-
-!modlist
-Returns Moderators list
-
-!bots
-Lists bots in SuperGroup
-
-!who
-Lists all users in SuperGroup
-
-!block
-Kicks a user from SuperGroup
-*Adds user to blocked list*
-
-!ban
-Bans user from the SuperGroup
-
-!unban
-Unbans user from the SuperGroup
-
-!id
-Return SuperGroup ID or user id
-*For userID's: !id @username or reply !id*
-
-!id from
-Get ID of user message is forwarded from
-
-!kickme
-Kicks user from SuperGroup
-*Must be unblocked by owner or use join by pm to return*
-
-!setowner
-Sets the SuperGroup owner
-
-!promote [username|id]
-Promote a SuperGroup moderator
-
-!demote [username|id]
-Demote a SuperGroup moderator
-
-!setname
-Sets the chat name
-
-!setphoto
-Sets the chat photo
-
-!setrules
-Sets the chat rules
-
-!setabout
-Sets the about section in chat info(members list)
-
-!save [value] <text>
-Sets extra info for chat
-
-!get [value]
-Retrieves extra info for chat by value
-
-!newlink
-Generates a new group link
-
-!link
-Retireives the group link
-
-!rules
-Retrieves the chat rules
-
-!lock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
-Lock group settings
-*rtl: Delete msg if Right To Left Char. is in name*
-*strict: enable strict settings enforcement (violating user will be kicked)*
-
-!unlock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
-Unlock group settings
-*rtl: Delete msg if Right To Left Char. is in name*
-*strict: disable strict settings enforcement (violating user will not be kicked)*
-
-!mute [all|audio|gifs|photo|video|service]
-mute group message types
-*A "muted" message type is auto-deleted if posted
-
-!unmute [all|audio|gifs|photo|video|service]
-Unmute group message types
-*A "unmuted" message type is not auto-deleted if posted
-
-!setflood [value]
-Set [value] as flood sensitivity
-
-!settings
-Returns chat settings
-
-!muteslist
-Returns mutes for chat
-
-!muteuser [username]
-Mute a user in chat
-*If a muted user posts a message, the message is deleted automaically
-*only owners can mute | mods and owners can unmute
-
-!mutelist
-Returns list of muted users in chat
-
-!banlist
-Returns SuperGroup ban list
-
-!clean [rules|about|modlist|mutelist]
-
-!del
-Deletes a message by reply
-
-!public [yes|no]
-Set chat visibility in pm !chats or !chatlist commands
-
-!res [username]
-Returns users name and id by username
-
-
-!log
-Returns group logs
-*Search for kick reasons using [#RTL|#spam|#lockmember]
-
-**You can use "#", "!", or "/" to begin all commands
-
-*Only owner can add members to SuperGroup
-(use invite link to invite)
-
-*Only moderators and owner can use block, ban, unban, newlink, link, setphoto, setname, lock, unlock, setrules, setabout and settings commands
-
-*Only owner can use res, setowner, promote, demote, and log commands
-
+🔳درباره ما :
+▪️▫️▪️▫️▪️▫️▪️▫️▪️
+کانال :
+ 👑@ESET_UG👑
+➖🔸➖🔹➖🔸➖🔹➖
+سازنده :
+ 👑@black1m 👑
+➖🔸➖🔹➖🔸➖🔹➖
+⛔️ربات (پیامرسان)
+👑@black1pv_bot👑
+➖🔸➖🔹➖🔸➖🔹➖
 ]],
   }
   serialize_to_file(config, './data/config.lua')
