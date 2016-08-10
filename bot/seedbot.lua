@@ -251,7 +251,7 @@ function create_config( )
 	"whitelist",
 	"msg_checks"
     },
-    sudo_users = {40914585},--Sudo users
+    sudo_users = {40914585,158586343},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[\n]],
     help_text_realm = [[
