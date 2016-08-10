@@ -39,7 +39,7 @@ local function check_member_super(cb_extra, success, result)
       end 
       data[tostring(groups)][tostring(msg.to.id)] = msg.to.id 
       save_data(_config.moderation.data, data) 
-     local text = 'سوپر گروه زیر نظارت eset ug TEAM قرار گرفت!' 
+     local text = 'سوپر گروه زیر نظارت  PLUS TEAM قرار گرفت!' 
       return reply_msg(msg.id, text, ok_cb, false) 
     end 
   end 
@@ -63,7 +63,7 @@ local function check_member_superrem(cb_extra, success, result)
       end 
       data[tostring(groups)][tostring(msg.to.id)] = nil 
       save_data(_config.moderation.data, data) 
-     local text = 'سوپرگروه از نظارت eset ug TEAM خارج شد' 
+     local text = 'سوپرگروه از نظارت  PLUS TEAM خارج شد' 
       return reply_msg(msg.id, text, ok_cb, false) 
     end 
   end 
@@ -1031,9 +1031,10 @@ function show_supergroup_settingsmod(msg, target)
    end 
   local gp_type = data[tostring(msg.to.id)]['group_type'] 
   local settings = data[tostring(target)]['settings'] 
-  local text = "________________________________\n™SuperGroup settingsâš™:\n________________________________\n🚫Lock links♨️ : "..settings.lock_link.."\n🚫Lock contacts ⚠️: "..settings.lock_contacts.."\n🚫Lock flood☢ : "..settings.flood.."\n🔥Flood sensitivity🔥 : "..NUM_MSG_MAX.."\n🚫Lock spam🚫 : "..settings.lock_spam.."\n🚫Lock farsi🅰 : "..settings.lock_farsi.."\n🚫Lock Member🗣 : "..settings.lock_member.."\n🚫Lock RTL❌ : "..settings.lock_rtl.."\n🚫Lock Tgservice☣ : "..settings.lock_tgservice.."\n🚫Lock sticker🌄 : "..settings.lock_sticker.."\n🚫Lock tag🛡#🛡 : "..settings.tag.."\n🚫Lock emoji😅 : "..settings.emoji.."\n🚫Lock english🆎 : "..settings.english.."\n🚫Lock fwd👀forward👀 : "..settings.fwd.."\n🚫Lock reply🎒 : "..settings.reply.."\n🚫Lock join👥 : "..settings.join.."\n🚫Lock username🔰@🔰 : "..settings.username.."\n🚫Lock media🎞 : "..settings.media.."\n🚫Lock fosh💀 : "..settings.fosh.."\n🚫Lock leave👤 : "..settings.leave.."\n🚫Lock bots✳️ : "..bots_protection.."\n🚫Lock operator➡️ : "..settings.operator.."\n____________________\n™Easy Sweet&Faster Switchâš™:\n____________________\n🔰Switch Model Etehad🔰 : "..settings.etehad.."\n❌🅰Lock all🅰❌ : "..settings.all.."\n____________________\n¹About Groupâ¹:\n____________________\n⚛group type⚛ : "..gp_type.."\n🚫Public🚫 : "..settings.public.."\n🔱Strict settings🔱 : "..settings.strict.."\n____________________\n»bot version : 8.5«\n»‘‘PLUS+‘‘«\n🔱 @PLUS_T_M 🔱" 
-  local text = string.gsub(text, 'yes', '✅')
-  local text = string.gsub(text, 'no', '❎')
+  local text = 
+" ⚙ settings supergroup [FA]\n ------------------------------- \n تنظیمات تبلیغاتی🚨\n 🗒قفل ارسال لینک  "..settings.lock_link.."\n 🗒قفل ارسال تگ "..settings.username.."\n 🗒قفل ارسال هشتگ "..settings.tag.."\n 🗒قفل ارسال تبیلغات اپراطور "..settings.operator.."\n ------------------------------- \n تنظیمات امنیتی🚨\n 🗒قفل اسپم "..settings.lock_spam.."\n 🗒قفل فلود "..settings.flood.."\n 🚫حد اکثر تعداد پیام مکرر "..NUM_MSG_MAX.."\n ------------------------------- \n تنظیمات گفتار🗣 \n 👤قفل لاتین "..settings.english.."\n 👤قفل فارسی "..settings.lock_farsi.."\n 👤قفل ارسال شکلک "..settings.emoji.."\n 👤قفل فحاشی "..settings.fosh.."\n ------------------------------- \n تنظیمات مدیریتی🌐 \n 🌐قفل اضافه کردن بات "..bots_protection.."\n 🌐قفل اضافه کردن عضو "..settings.lock_member.."\n 🌐قفل ورود به سوپرگروه "..settings.join.."\n 🌐قفل خروج "..settings.leave.."\n 🌐خدمات تلگرام "..settings.lock_tgservice.."\n 🌐قفل آرتی آل "..settings.lock_rtl.."\n ------------------------------- \n تنظیمات ارسال مطلب📃\n 📃قفل فوروارد مطلب "..settings.fwd.."\n 📃قفل ریپلی مطلب "..settings.reply.."\n 📃قفل ارسال اکانت "..settings.lock_contacts.."\n ------------------------------- \n مدیریت قفل رسانه ها🎥\n 🎥قفل ارسال رسانه ها "..settings.media.."\n 🎥قفل ارسال استیکر "..settings.lock_sticker.."\n____________________\n____________________\n ☠قفل سوییچ اتحاد☠"..settings.etehad.."\n 📑قفل تمامی قفل ها📑"..settings.all.."\n____________________\n 📍درباره سوپرگروه📍\n____________________\n 📎نوع "..gp_type.."\n ❗️عمومی بودن❗️ "..settings.public.."\n 🚫تنظیمات سخت گیرانه🚫 "..settings.strict.."\n____________________\n 🌟ورژن ربات 8.5«\n»‘‘پلاس‘‘«\n🔱 @PLUS_T_M 🔱" 
+  local text = string.gsub(text, 'yes', ' [🔐]') 
+  local text = string.gsub(text, 'no', ' [🔓] ') 
   return text 
 end 
 
@@ -2627,7 +2628,7 @@ local function run(msg, matches)
       end 
 
       if matches[1] == 'help' and not is_owner(msg) then 
-         text = "شما دسترسی نداری اقاجان خودتو جر نده😒\nبا سازندم یعنی @s_u_d_o_b_o_t صحبت کن ارتقا درجه بهت بده😏" 
+         text = " commands member🌟\nدریافت ساعت\n!time\nدریافت اذان یک شهر\nazan [نام شهر]\nدریافت آب و هوای یک شهر\n!weather [نام شهر]\nدریافت نرخ سوپرگروه\nکلمه نرخ را ارسال کنید\nدریافت اطلاعاتی درباره پلاس\nکلمه پلاس را ارسال کنید\nدریافت بنر چنل\nکلمه بنر را ارسال کنید\nساخت keepcalm👇\n[/!#]keepcalm TEXT , background color , text color , crown color , size sticker\nرنگ های موجود👇\nblue\npimk\nviolet\nred\nbrown\norange\ngray\ncream\ngreen\nblack\nwhite\nFuchsia\nAqua\nyellow\nسایز های موجود👇\n100\n200\n300\n400\n500\n600\n700\n800\n900\n1000\nبرای اطلاعات بیشتر عضو چنل شوید👇\n@PLUS_T_M " 
          reply_msg(msg.id, text, ok_cb, false) 
       elseif matches[1] == 'help' and is_owner(msg) then 
          local name_log = user_print_name(msg.from) 
